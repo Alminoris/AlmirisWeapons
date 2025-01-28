@@ -4,7 +4,7 @@ import net.alminoris.almirisweapons.AlmirisWeapons;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.render.model.json.ModelTransformationMode;
+import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
@@ -21,13 +21,13 @@ import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIAL
 public abstract class ItemRendererMixin
 {
     @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
-    public BakedModel useClaymoreModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    public BakedModel useClaymoreModel(BakedModel value, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
     {
         for(String name : MATERIALS)
         {
-            if (stack.isOf(CLAYMORES.get(name)) && renderMode != ModelTransformationMode.GUI)
+            if (stack.isOf(CLAYMORES.get(name)) && renderMode != ModelTransformation.Mode.GUI)
             {
-                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_claymore_3d"), "inventory"));
+                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, name+"_claymore_3d"), "inventory"));
             }
         }
 
@@ -35,13 +35,13 @@ public abstract class ItemRendererMixin
     }
 
     @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
-    public BakedModel useHalberdModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    public BakedModel useHalberdModel(BakedModel value, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
     {
         for(String name : MATERIALS)
         {
-            if (stack.isOf(HALBERDS.get(name)) && renderMode != ModelTransformationMode.GUI)
+            if (stack.isOf(HALBERDS.get(name)) && renderMode != ModelTransformation.Mode.GUI)
             {
-                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_halberd_3d"), "inventory"));
+                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, name+"_halberd_3d"), "inventory"));
             }
         }
 

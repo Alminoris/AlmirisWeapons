@@ -1,7 +1,7 @@
 package net.alminoris.almirisweapons.datagen;
 
 import net.alminoris.almirisweapons.item.ModItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
@@ -11,9 +11,9 @@ import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIAL
 
 public class ModModelProvider extends FabricModelProvider
 {
-    public ModModelProvider(FabricDataOutput dataOutput)
+    public ModModelProvider(FabricDataGenerator dataGenerator)
     {
-        super(dataOutput);
+        super(dataGenerator);
     }
 
     @Override
