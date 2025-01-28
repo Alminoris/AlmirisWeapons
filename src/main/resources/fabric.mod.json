@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "almirisweapons",
+	"version": "${version}",
+	"name": "Almiris Weapons",
+	"description": "Hi, I'm Almiris. This is my new mod about many different vanilla-style weapons called 'Almiris Weapons'! Now you can annihilate your enemies with so much weapon variants (swords, scythes, war stuffs, guns, bows, crossbows, etc). All weapons have Better Combat integration.",
+	"authors": [
+		"Almiris (Alminoris)"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/Alminoris/AlmirisWeapons"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/almirisweapons/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.alminoris.almirisweapons.AlmirisWeapons"
+		],
+		"client": [
+			"net.alminoris.almirisweapons.AlmirisWeaponsClient"
+		],
+		"fabric-datagen": [
+			"net.alminoris.almirisweapons.AlmirisWeaponsDataGenerator"
+		]
+	},
+	"mixins": [
+		"almirisweapons.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
