@@ -23,25 +23,25 @@ import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIAL
 public abstract class ModelLoaderMixin
 {
     @Shadow
-    protected abstract void loadItemModel(ModelIdentifier id);
+    protected abstract void addModel(ModelIdentifier id);
 
-    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
-    public void addClaymore(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci)
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
+    public void addClaymore(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci)
     {
         for(String name : MATERIALS)
         {
             ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_claymore_3d"), "inventory");
-            this.loadItemModel(id);
+            this.addModel(id);
         }
     }
 
-    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
-    public void addHalberd(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci)
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
+    public void addHalberd(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci)
     {
         for(String name : MATERIALS)
         {
             ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_halberd_3d"), "inventory");
-            this.loadItemModel(id);
+            this.addModel(id);
         }
     }
 }

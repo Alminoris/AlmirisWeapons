@@ -27,18 +27,12 @@ public class ModItems
     {
         for(String name : WeaponSetsHelper.MATERIALS)
         {
-            HALBERDS.put(name, registerItem(name+"_halberd", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(TOOL_MATERIALS.get(name), 4, -3.0f)))));
-            RAPIERS.put(name, registerItem(name+"_rapier", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(TOOL_MATERIALS.get(name), 2, -2.0f)))));
-            CLAYMORES.put(name, registerItem(name+"_claymore", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(TOOL_MATERIALS.get(name), 5, -3.0f)))));
-            BATTLE_AXES.put(name, registerItem(name+"_battle_axe", new AxeItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(TOOL_MATERIALS.get(name), 6, -3.1f)))));
-            SAI.put(name, registerItem(name+"_sai", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(TOOL_MATERIALS.get(name), 1, -1.5f)))));
-            MACES.put(name, registerItem(name+"_mace", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(TOOL_MATERIALS.get(name), 6, -3.5f)))));
+            HALBERDS.put(name, registerItem(name+"_halberd", new SwordItem(TOOL_MATERIALS.get(name), 4, -3.0f, new Item.Settings().maxCount(1))));
+            RAPIERS.put(name, registerItem(name+"_rapier", new SwordItem(TOOL_MATERIALS.get(name), 2, -2.0f, new Item.Settings().maxCount(1))));
+            CLAYMORES.put(name, registerItem(name+"_claymore", new SwordItem(TOOL_MATERIALS.get(name), 5, -3.0f, new Item.Settings().maxCount(1))));
+            BATTLE_AXES.put(name, registerItem(name+"_battle_axe", new AxeItem(TOOL_MATERIALS.get(name), 6, -3.1f, new Item.Settings().maxCount(1))));
+            SAI.put(name, registerItem(name+"_sai", new SwordItem(TOOL_MATERIALS.get(name), 1, -1.5f, new Item.Settings().maxCount(1))));
+            MACES.put(name, registerItem(name+"_mace", new SwordItem(TOOL_MATERIALS.get(name), 6, -3.5f, new Item.Settings().maxCount(1))));
         }
     }
 
