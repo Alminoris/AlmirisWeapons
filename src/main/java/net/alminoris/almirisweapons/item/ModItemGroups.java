@@ -5,8 +5,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -14,9 +12,8 @@ import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIAL
 
 public class ModItemGroups
 {
-    public static final ItemGroup ASEAT_TAB = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(AlmirisWeapons.MOD_ID, "almweaptab"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.almweaptab"))
+    public static final ItemGroup ASEAT_TAB = FabricItemGroup.builder(Identifier.of(AlmirisWeapons.MOD_ID, "almweaptab"))
+            .displayName(Text.translatable("itemgroup.almweaptab"))
                     .icon(() -> new ItemStack(Items.IRON_SWORD)).entries((displayContext, entries) ->
                     {
                         for (String name : MATERIALS)
@@ -28,7 +25,7 @@ public class ModItemGroups
                             entries.add(ModItems.SAI.get(name));
                             entries.add(ModItems.MACES.get(name));
                         }
-                    }).build());
+                    }).build();
 
     public static void registerItemGroups()
     {
