@@ -2,7 +2,6 @@ package net.alminoris.almirisweapons.item;
 
 import net.alminoris.almirisweapons.AlmirisWeapons;
 import net.alminoris.almirisweapons.util.helper.WeaponSetsHelper;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.Identifier;
@@ -32,7 +31,7 @@ public class ModItems
                     .maxCount(1).group(ModItemGroups.ALMIRIS_WEAPONS_TAB))));
             CLAYMORES.put(name, registerItem(name+"_claymore", new SwordItem(TOOL_MATERIALS.get(name), 5, -3.0f, new Item.Settings()
                     .maxCount(1).group(ModItemGroups.ALMIRIS_WEAPONS_TAB))));
-            BATTLE_AXES.put(name, registerItem(name+"_battle_axe", new AxeItem(TOOL_MATERIALS.get(name), 6, -3.1f, new Item.Settings()
+            BATTLE_AXES.put(name, registerItem(name+"_battle_axe", new SwordItem(TOOL_MATERIALS.get(name), 6, -3.1f, new Item.Settings()
                     .maxCount(1).group(ModItemGroups.ALMIRIS_WEAPONS_TAB))));
             SAI.put(name, registerItem(name+"_sai", new SwordItem(TOOL_MATERIALS.get(name), 1, -1.5f, new Item.Settings()
                     .maxCount(1).group(ModItemGroups.ALMIRIS_WEAPONS_TAB))));
@@ -43,7 +42,7 @@ public class ModItems
 
     private static Item registerItem(String name, Item item)
     {
-        return Registry.register(Registry.ITEM, Identifier.of(AlmirisWeapons.MOD_ID, name), item);
+        return Registry.register(Registry.ITEM, new Identifier(AlmirisWeapons.MOD_ID, name), item);
     }
 
     public static void registerItems()
