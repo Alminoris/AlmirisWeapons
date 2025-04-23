@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "almirisweapons:wood_battle_axe",
+    "almirisweapons:stone_battle_axe",
+    "almirisweapons:iron_battle_axe",
+    "almirisweapons:gold_battle_axe",
+    "almirisweapons:diamond_battle_axe",
+    "almirisweapons:netherite_battle_axe"
+  ]
+}
