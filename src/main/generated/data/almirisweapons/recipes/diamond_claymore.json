@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "/  "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond_sword"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "almirisweapons:diamond_claymore"
+  }
+}

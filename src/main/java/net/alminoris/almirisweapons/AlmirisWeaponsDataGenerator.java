@@ -1,5 +1,6 @@
 package net.alminoris.almirisweapons;
 
+import net.alminoris.almirisweapons.datagen.ModItemTagProvider;
 import net.alminoris.almirisweapons.datagen.ModModelProvider;
 import net.alminoris.almirisweapons.datagen.ModRecipeProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -12,5 +13,6 @@ public class AlmirisWeaponsDataGenerator implements DataGeneratorEntrypoint
 	{
 		fabricDataGenerator.addProvider(ModModelProvider::new);
 		fabricDataGenerator.addProvider(ModRecipeProvider::new);
+		fabricDataGenerator.addProvider(ModItemTagProvider::new);
 	}
 }
