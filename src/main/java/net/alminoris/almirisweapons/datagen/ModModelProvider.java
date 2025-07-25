@@ -29,6 +29,12 @@ public class ModModelProvider extends FabricModelProvider
         {
             itemModelGenerator.register(ModItems.HALBERDS.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.CLAYMORES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.DAGGERS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.GLAIVES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.BATTLE_STAVES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.ODACHIS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.KATANAS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.SCYTHES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.BATTLE_AXES.get(name), Models.HANDHELD);
             itemModelGenerator.register(ModItems.MACES.get(name), Models.HANDHELD);
         }

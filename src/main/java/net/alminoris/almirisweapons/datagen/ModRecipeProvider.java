@@ -23,6 +23,180 @@ public class ModRecipeProvider extends FabricRecipeProvider
     @Override
     public void generate(RecipeExporter recipeExporter)
     {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("wood"), 1)
+                .pattern("  #")
+                .pattern(" / ")
+                .pattern("#  ")
+                .input('#', ItemTags.PLANKS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("stone"), 1)
+                .pattern("  #")
+                .pattern(" / ")
+                .pattern("#  ")
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("iron"), 1)
+                .pattern("  #")
+                .pattern(" / ")
+                .pattern("#  ")
+                .input('#', Items.IRON_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("gold"), 1)
+                .pattern("  #")
+                .pattern(" / ")
+                .pattern("#  ")
+                .input('#', Items.GOLD_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("diamond"), 1)
+                .pattern("  #")
+                .pattern(" / ")
+                .pattern("#  ")
+                .input('#', Items.DIAMOND)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("netherite"), 1)
+                .pattern("  #")
+                .pattern(" / ")
+                .pattern("#  ")
+                .input('#', Items.NETHERITE_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.GLAIVES.get("wood"), 1)
+                .pattern("  #")
+                .pattern("#/ ")
+                .pattern("/  ")
+                .input('#', ItemTags.PLANKS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.GLAIVES.get("stone"), 1)
+                .pattern("  #")
+                .pattern("#/ ")
+                .pattern("/  ")
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.GLAIVES.get("iron"), 1)
+                .pattern("  #")
+                .pattern("#/ ")
+                .pattern("/  ")
+                .input('#', Items.IRON_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.GLAIVES.get("gold"), 1)
+                .pattern("  #")
+                .pattern("#/ ")
+                .pattern("/  ")
+                .input('#', Items.GOLD_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.GLAIVES.get("diamond"), 1)
+                .pattern("  #")
+                .pattern("#/ ")
+                .pattern("/  ")
+                .input('#', Items.DIAMOND)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.GLAIVES.get("netherite"), 1)
+                .pattern("  #")
+                .pattern("#/ ")
+                .pattern("/  ")
+                .input('#', Items.NETHERITE_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SCYTHES.get("wood"), 1)
+                .pattern("###")
+                .pattern(" /#")
+                .pattern("/  ")
+                .input('#', ItemTags.PLANKS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SCYTHES.get("stone"), 1)
+                .pattern("###")
+                .pattern(" /#")
+                .pattern("/  ")
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SCYTHES.get("iron"), 1)
+                .pattern("###")
+                .pattern(" /#")
+                .pattern("/  ")
+                .input('#', Items.IRON_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SCYTHES.get("gold"), 1)
+                .pattern("###")
+                .pattern(" /#")
+                .pattern("/  ")
+                .input('#', Items.GOLD_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SCYTHES.get("diamond"), 1)
+                .pattern("###")
+                .pattern(" /#")
+                .pattern("/  ")
+                .input('#', Items.DIAMOND)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SCYTHES.get("netherite"), 1)
+                .pattern("###")
+                .pattern(" /#")
+                .pattern("/  ")
+                .input('#', Items.NETHERITE_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HALBERDS.get("wood"), 1)
                 .pattern("  #")
                 .pattern(" /#")
@@ -133,6 +307,64 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .pattern("  #")
                 .pattern(" # ")
                 .pattern("/  ")
+                .input('#', Items.NETHERITE_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATANAS.get("wood"), 1)
+                .pattern("#  ")
+                .pattern(" # ")
+                .pattern("  /")
+                .input('#', ItemTags.PLANKS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATANAS.get("stone"), 1)
+                .pattern("#  ")
+                .pattern(" # ")
+                .pattern("  /")
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATANAS.get("iron"), 1)
+                .pattern("#  ")
+                .pattern(" # ")
+                .pattern("  /")
+                .input('#', Items.IRON_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATANAS.get("gold"), 1)
+                .pattern("#  ")
+                .pattern(" # ")
+                .pattern("  /")
+                .input('#', Items.GOLD_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATANAS.get("diamond"), 1)
+                .pattern("#  ")
+                .pattern(" # ")
+                .pattern("  /")
+                .input('#', Items.DIAMOND)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATANAS.get("netherite"), 1)
+                .pattern("#  ")
+                .pattern(" # ")
+                .pattern("  /")
                 .input('#', Items.NETHERITE_INGOT)
                 .input('/', Items.STICK)
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
@@ -303,6 +535,64 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .pattern("  #")
                 .pattern("## ")
                 .pattern("/# ")
+                .input('#', Items.NETHERITE_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.DAGGERS.get("wood"), 1)
+                .pattern("  #")
+                .pattern("#  ")
+                .pattern(" / ")
+                .input('#', ItemTags.PLANKS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.DAGGERS.get("stone"), 1)
+                .pattern("  #")
+                .pattern("#  ")
+                .pattern(" / ")
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.DAGGERS.get("iron"), 1)
+                .pattern("  #")
+                .pattern("#  ")
+                .pattern(" / ")
+                .input('#', Items.IRON_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.DAGGERS.get("gold"), 1)
+                .pattern("  #")
+                .pattern("#  ")
+                .pattern(" / ")
+                .input('#', Items.GOLD_INGOT)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.DAGGERS.get("diamond"), 1)
+                .pattern("  #")
+                .pattern("#  ")
+                .pattern(" / ")
+                .input('#', Items.DIAMOND)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.DAGGERS.get("netherite"), 1)
+                .pattern("  #")
+                .pattern("#  ")
+                .pattern(" / ")
                 .input('#', Items.NETHERITE_INGOT)
                 .input('/', Items.STICK)
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))

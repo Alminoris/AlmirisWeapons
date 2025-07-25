@@ -27,6 +27,13 @@ public class ModItemGroups
                             entries.add(ModItems.BATTLE_AXES.get(name));
                             entries.add(ModItems.SAI.get(name));
                             entries.add(ModItems.MACES.get(name));
+
+                            entries.add(ModItems.DAGGERS.get(name));
+                            entries.add(ModItems.GLAIVES.get(name));
+                            entries.add(ModItems.KATANAS.get(name));
+                            entries.add(ModItems.BATTLE_STAVES.get(name));
+                            entries.add(ModItems.SCYTHES.get(name));
+                            entries.add(ModItems.ODACHIS.get(name));
                         }
                     }).build());
 
