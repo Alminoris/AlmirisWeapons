@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:stone_katana"
+    },
+    "*": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "*  ",
+    " # ",
+    "  /"
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:stone_odachi"
+  }
+}
