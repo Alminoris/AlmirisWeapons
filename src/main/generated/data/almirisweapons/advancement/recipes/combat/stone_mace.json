@@ -11,6 +11,16 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_stone_mace_tip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:stone_mace_tip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "almirisweapons:stone_mace"
@@ -21,6 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
+      "has_stone_mace_tip",
       "has_stick"
     ]
   ],

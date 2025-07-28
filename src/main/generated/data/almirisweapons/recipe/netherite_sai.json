@@ -3,16 +3,15 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:netherite_ingot"
+      "item": "almirisweapons:netherite_stabbing_tip"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [
-    "  #",
-    "## ",
-    "/# "
+    "##",
+    "/#"
   ],
   "result": {
     "count": 1,

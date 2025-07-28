@@ -3,10 +3,10 @@
   "category": "equipment",
   "key": {
     "#": {
-      "tag": "minecraft:stone_tool_materials"
+      "item": "almirisweapons:stone_singleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [

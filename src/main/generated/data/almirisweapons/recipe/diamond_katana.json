@@ -3,10 +3,10 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:diamond"
+      "item": "almirisweapons:diamond_singleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [

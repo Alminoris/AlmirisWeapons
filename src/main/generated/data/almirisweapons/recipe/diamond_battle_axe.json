@@ -3,14 +3,13 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:diamond"
+      "item": "almirisweapons:diamond_axe_tip"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [
-    " # ",
     "#/#",
     " / "
   ],

@@ -5,6 +5,7 @@ import net.alminoris.almirisweapons.util.helper.WeaponHelper;
 import net.alminoris.almirisweapons.util.helper.WeaponSetsHelper;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -30,10 +31,33 @@ public class ModItems
     public static final Dictionary<String, Item> DAGGERS = new Hashtable<>();
     public static final Dictionary<String, Item> GLAIVES = new Hashtable<>();
 
+    public static final Dictionary<String, Item> STABBING_TIPS = new Hashtable<>();
+    public static final Dictionary<String, Item> MACE_TIPS = new Hashtable<>();
+    public static final Dictionary<String, Item> AXE_TIPS = new Hashtable<>();
+    public static final Dictionary<String, Item> DOUBLEEDGE_BLADES = new Hashtable<>();
+    public static final Dictionary<String, Item> SINGLEEDGE_BLADES = new Hashtable<>();
+    public static final Dictionary<String, Item> CURVED_BLADES = new Hashtable<>();
+
+    public static final Item SMALL_STICK = registerItem("small_stick", new Item(new Item.Settings()));
+
+    public static final Dictionary<String, Item> MATERIAL_ITEMS = new Hashtable<>();
+
     static
     {
+        MATERIAL_ITEMS.put("iron", Items.IRON_INGOT);
+        MATERIAL_ITEMS.put("diamond", Items.DIAMOND);
+        MATERIAL_ITEMS.put("gold", Items.GOLD_INGOT);
+        MATERIAL_ITEMS.put("netherite", Items.NETHERITE_INGOT);
+
         for(String name : WeaponSetsHelper.MATERIALS)
         {
+            STABBING_TIPS.put(name, registerItem(name+"_stabbing_tip", new Item(new Item.Settings())));
+            MACE_TIPS.put(name, registerItem(name+"_mace_tip", new Item(new Item.Settings())));
+            AXE_TIPS.put(name, registerItem(name+"_axe_tip", new Item(new Item.Settings())));
+            DOUBLEEDGE_BLADES.put(name, registerItem(name+"_doubleedge_blade", new Item(new Item.Settings())));
+            SINGLEEDGE_BLADES.put(name, registerItem(name+"_singleedge_blade", new Item(new Item.Settings())));
+            CURVED_BLADES.put(name, registerItem(name+"_curved_blade", new Item(new Item.Settings())));
+
             HALBERDS.put(name, registerItem(name+"_halberd", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
                     .attributeModifiers(WeaponHelper.createAttributes(TOOL_MATERIALS.get(name), 4, -3.0D)))));
             RAPIERS.put(name, registerItem(name+"_rapier", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gold_ingot": {
+    "has_gold_singleedge_blade": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:gold_ingot"
+            "items": "almirisweapons:gold_singleedge_blade"
           }
         ]
       },
@@ -31,8 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gold_ingot",
-      "has_stick"
+      "has_stick",
+      "has_gold_singleedge_blade"
     ]
   ],
   "rewards": {

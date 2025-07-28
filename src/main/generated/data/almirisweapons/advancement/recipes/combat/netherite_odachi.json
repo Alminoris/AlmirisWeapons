@@ -1,16 +1,6 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_netherite_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:netherite_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_netherite_katana": {
       "conditions": {
         "items": [
@@ -21,11 +11,21 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stick": {
+    "has_netherite_singleedge_blade": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stick"
+            "items": "almirisweapons:netherite_singleedge_blade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_small_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:small_stick"
           }
         ]
       },
@@ -41,9 +41,9 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_netherite_ingot",
-      "has_stick",
-      "has_netherite_katana"
+      "has_netherite_singleedge_blade",
+      "has_netherite_katana",
+      "has_small_stick"
     ]
   ],
   "rewards": {

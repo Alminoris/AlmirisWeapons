@@ -25,6 +25,8 @@ public class ModModelProvider extends FabricModelProvider
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator)
     {
+        itemModelGenerator.register(ModItems.SMALL_STICK, Models.GENERATED);
+
         for (String name : MATERIALS)
         {
             itemModelGenerator.register(ModItems.HALBERDS.get(name), Models.GENERATED);
@@ -37,6 +39,13 @@ public class ModModelProvider extends FabricModelProvider
             itemModelGenerator.register(ModItems.SCYTHES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.BATTLE_AXES.get(name), Models.HANDHELD);
             itemModelGenerator.register(ModItems.MACES.get(name), Models.HANDHELD);
+
+            itemModelGenerator.register(ModItems.STABBING_TIPS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.MACE_TIPS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.AXE_TIPS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.CURVED_BLADES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.SINGLEEDGE_BLADES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.DOUBLEEDGE_BLADES.get(name), Models.GENERATED);
         }
     }
 }

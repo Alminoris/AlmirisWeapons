@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diamond": {
+    "has_diamond_curved_blade": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:diamond"
+            "items": "almirisweapons:diamond_curved_blade"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stick": {
+    "has_small_stick": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stick"
+            "items": "almirisweapons:small_stick"
           }
         ]
       },
@@ -31,8 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_diamond",
-      "has_stick"
+      "has_diamond_curved_blade",
+      "has_small_stick"
     ]
   ],
   "rewards": {

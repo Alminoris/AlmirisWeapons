@@ -6,10 +6,10 @@
       "item": "almirisweapons:wood_katana"
     },
     "*": {
-      "tag": "minecraft:planks"
+      "item": "almirisweapons:wood_singleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [

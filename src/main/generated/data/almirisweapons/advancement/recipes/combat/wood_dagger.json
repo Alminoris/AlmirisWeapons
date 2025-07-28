@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stick": {
+    "has_small_stick": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stick"
+            "items": "almirisweapons:small_stick"
           }
         ]
       },
@@ -16,12 +16,23 @@
         "recipe": "almirisweapons:wood_dagger"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_curved_blade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:wood_curved_blade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_stick"
+      "has_wood_curved_blade",
+      "has_small_stick"
     ]
   ],
   "rewards": {

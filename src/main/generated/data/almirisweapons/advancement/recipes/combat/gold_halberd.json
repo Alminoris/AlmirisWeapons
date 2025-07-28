@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gold_ingot": {
+    "has_gold_axe_tip": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:gold_ingot"
+            "items": "almirisweapons:gold_axe_tip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gold_stabbing_tip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:gold_stabbing_tip"
           }
         ]
       },
@@ -31,8 +41,9 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gold_ingot",
-      "has_stick"
+      "has_stick",
+      "has_gold_stabbing_tip",
+      "has_gold_axe_tip"
     ]
   ],
   "rewards": {

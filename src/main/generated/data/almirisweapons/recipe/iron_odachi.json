@@ -6,10 +6,10 @@
       "item": "almirisweapons:iron_katana"
     },
     "*": {
-      "item": "minecraft:iron_ingot"
+      "item": "almirisweapons:iron_singleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [

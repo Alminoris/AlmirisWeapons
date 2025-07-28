@@ -16,12 +16,23 @@
         "recipe": "almirisweapons:wood_glaive"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_singleedge_blade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:wood_singleedge_blade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_stick"
+      "has_stick",
+      "has_wood_singleedge_blade"
     ]
   ],
   "rewards": {

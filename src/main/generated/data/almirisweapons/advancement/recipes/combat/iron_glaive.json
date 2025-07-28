@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_ingot": {
+    "has_iron_singleedge_blade": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:iron_ingot"
+            "items": "almirisweapons:iron_singleedge_blade"
           }
         ]
       },
@@ -31,8 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_iron_ingot",
-      "has_stick"
+      "has_stick",
+      "has_iron_singleedge_blade"
     ]
   ],
   "rewards": {

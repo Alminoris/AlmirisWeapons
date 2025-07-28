@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stick": {
+    "has_stone_doubleedge_blade": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:stick"
+            "items": "almirisweapons:stone_doubleedge_blade"
           }
         ]
       },
@@ -32,7 +32,7 @@
     [
       "has_the_recipe",
       "has_stone_sword",
-      "has_stick"
+      "has_stone_doubleedge_blade"
     ]
   ],
   "rewards": {

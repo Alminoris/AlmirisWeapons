@@ -3,16 +3,15 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:diamond"
+      "item": "almirisweapons:diamond_mace_tip"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    " ##",
-    " ##",
-    "/  "
+    " #",
+    "/ "
   ],
   "result": {
     "count": 1,

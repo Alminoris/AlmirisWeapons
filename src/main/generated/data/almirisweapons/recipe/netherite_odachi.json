@@ -6,10 +6,10 @@
       "item": "almirisweapons:netherite_katana"
     },
     "*": {
-      "item": "minecraft:netherite_ingot"
+      "item": "almirisweapons:netherite_singleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diamond": {
+    "has_diamond_mace_tip": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:diamond"
+            "items": "almirisweapons:diamond_mace_tip"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_diamond",
+      "has_diamond_mace_tip",
       "has_stick"
     ]
   ],
