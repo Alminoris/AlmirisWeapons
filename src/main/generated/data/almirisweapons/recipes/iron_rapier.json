@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:iron_ingot"
+      "item": "almirisweapons:iron_stabbing_tip"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "almirisweapons:small_stick"
     }
   },
   "pattern": [

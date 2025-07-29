@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:diamond_sword"
+      "item": "almirisweapons:diamond_doubleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "minecraft:diamond_sword"
     }
   },
   "pattern": [
-    " # ",
-    "/  "
+    " #",
+    "/ "
   ],
   "result": {
     "item": "almirisweapons:diamond_claymore"

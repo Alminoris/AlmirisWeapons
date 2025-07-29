@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "almirisweapons:netherite_curved_blade"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    " #",
+    "/ "
+  ],
+  "result": {
+    "item": "almirisweapons:netherite_dagger"
+  }
+}

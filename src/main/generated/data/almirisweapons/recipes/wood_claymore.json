@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:wooden_sword"
+      "item": "almirisweapons:wood_doubleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "minecraft:wooden_sword"
     }
   },
   "pattern": [

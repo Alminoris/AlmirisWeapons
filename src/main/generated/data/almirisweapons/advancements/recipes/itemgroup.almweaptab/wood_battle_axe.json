@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stick": {
+    "has_small_stick": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stick"
+              "almirisweapons:small_stick"
             ]
           }
         ]
@@ -18,11 +18,24 @@
         "recipe": "almirisweapons:wood_battle_axe"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_axe_tip": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:wood_axe_tip"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_stick",
+      "has_wood_axe_tip",
+      "has_small_stick",
       "has_the_recipe"
     ]
   ],

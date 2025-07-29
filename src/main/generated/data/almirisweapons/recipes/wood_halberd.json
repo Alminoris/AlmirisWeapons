@@ -2,15 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "minecraft:planks"
+      "item": "almirisweapons:wood_axe_tip"
+    },
+    "*": {
+      "item": "almirisweapons:wood_stabbing_tip"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "  #",
-    " /#",
+    " #*",
+    " / ",
     "/  "
   ],
   "result": {

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "almirisweapons:iron_singleedge_blade"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  #",
+    " / ",
+    "/  "
+  ],
+  "result": {
+    "item": "almirisweapons:iron_glaive"
+  }
+}

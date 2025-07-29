@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "almirisweapons:diamond_katana"
+    },
+    "*": {
+      "item": "almirisweapons:diamond_singleedge_blade"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "*  ",
+    " # ",
+    "  /"
+  ],
+  "result": {
+    "item": "almirisweapons:diamond_odachi"
+  }
+}

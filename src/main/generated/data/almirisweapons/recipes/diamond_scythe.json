@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "almirisweapons:diamond_curved_blade"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    " / ",
+    "/  "
+  ],
+  "result": {
+    "item": "almirisweapons:diamond_scythe"
+  }
+}
