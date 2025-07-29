@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #",
+    "/ "
+  ],
+  "key": {
+    "#": {
+      "item": "almirisweapons:wood_curved_blade"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "result": {
+    "item": "almirisweapons:wood_dagger"
+  }
+}

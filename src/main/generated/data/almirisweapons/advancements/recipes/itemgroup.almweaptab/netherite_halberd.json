@@ -6,18 +6,6 @@
     ]
   },
   "criteria": {
-    "has_netherite_ingot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:netherite_ingot"
-            ]
-          }
-        ]
-      }
-    },
     "has_stick": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -25,6 +13,30 @@
           {
             "items": [
               "minecraft:stick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_netherite_stabbing_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:netherite_stabbing_tip"
+            ]
+          }
+        ]
+      }
+    },
+    "has_netherite_axe_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:netherite_axe_tip"
             ]
           }
         ]
@@ -39,8 +51,9 @@
   },
   "requirements": [
     [
-      "has_netherite_ingot",
       "has_stick",
+      "has_netherite_stabbing_tip",
+      "has_netherite_axe_tip",
       "has_the_recipe"
     ]
   ]

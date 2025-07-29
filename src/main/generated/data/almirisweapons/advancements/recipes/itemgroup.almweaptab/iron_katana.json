@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:iron_katana"
+    ]
+  },
+  "criteria": {
+    "has_iron_singleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:iron_singleedge_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "has_small_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:small_stick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:iron_katana"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_singleedge_blade",
+      "has_small_stick",
+      "has_the_recipe"
+    ]
+  ]
+}

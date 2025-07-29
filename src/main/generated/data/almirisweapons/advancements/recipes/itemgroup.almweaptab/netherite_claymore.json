@@ -18,13 +18,13 @@
         ]
       }
     },
-    "has_stick": {
+    "has_netherite_doubleedge_blade": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stick"
+              "almirisweapons:netherite_doubleedge_blade"
             ]
           }
         ]
@@ -40,7 +40,7 @@
   "requirements": [
     [
       "has_netherite_sword",
-      "has_stick",
+      "has_netherite_doubleedge_blade",
       "has_the_recipe"
     ]
   ]

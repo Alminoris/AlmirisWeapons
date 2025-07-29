@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:stone_dagger"
+    ]
+  },
+  "criteria": {
+    "has_stone_curved_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:stone_curved_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "has_small_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:small_stick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:stone_dagger"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stone_curved_blade",
+      "has_small_stick",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -5,11 +5,11 @@
     "/  "
   ],
   "key": {
-    "#": {
+    "/": {
       "item": "minecraft:wooden_sword"
     },
-    "/": {
-      "item": "minecraft:stick"
+    "#": {
+      "item": "almirisweapons:wood_doubleedge_blade"
     }
   },
   "result": {

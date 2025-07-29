@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:wood_glaive"
+    ]
+  },
+  "criteria": {
+    "has_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_wood_singleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:wood_singleedge_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:wood_glaive"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stick",
+      "has_wood_singleedge_blade",
+      "has_the_recipe"
+    ]
+  ]
+}

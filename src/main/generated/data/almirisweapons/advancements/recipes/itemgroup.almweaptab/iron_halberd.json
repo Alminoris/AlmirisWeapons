@@ -6,18 +6,6 @@
     ]
   },
   "criteria": {
-    "has_iron_ingot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:iron_ingot"
-            ]
-          }
-        ]
-      }
-    },
     "has_stick": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -25,6 +13,30 @@
           {
             "items": [
               "minecraft:stick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_iron_stabbing_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:iron_stabbing_tip"
+            ]
+          }
+        ]
+      }
+    },
+    "has_iron_axe_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:iron_axe_tip"
             ]
           }
         ]
@@ -39,8 +51,9 @@
   },
   "requirements": [
     [
-      "has_iron_ingot",
       "has_stick",
+      "has_iron_stabbing_tip",
+      "has_iron_axe_tip",
       "has_the_recipe"
     ]
   ]

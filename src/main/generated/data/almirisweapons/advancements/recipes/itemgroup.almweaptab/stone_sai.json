@@ -6,13 +6,25 @@
     ]
   },
   "criteria": {
-    "has_stick": {
+    "has_stone_stabbing_tip": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stick"
+              "almirisweapons:stone_stabbing_tip"
+            ]
+          }
+        ]
+      }
+    },
+    "has_small_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:small_stick"
             ]
           }
         ]
@@ -27,7 +39,8 @@
   },
   "requirements": [
     [
-      "has_stick",
+      "has_stone_stabbing_tip",
+      "has_small_stick",
       "has_the_recipe"
     ]
   ]

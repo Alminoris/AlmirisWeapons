@@ -18,13 +18,13 @@
         ]
       }
     },
-    "has_stick": {
+    "has_diamond_doubleedge_blade": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stick"
+              "almirisweapons:diamond_doubleedge_blade"
             ]
           }
         ]
@@ -40,7 +40,7 @@
   "requirements": [
     [
       "has_diamond_sword",
-      "has_stick",
+      "has_diamond_doubleedge_blade",
       "has_the_recipe"
     ]
   ]

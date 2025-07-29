@@ -1,13 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " ##",
-    " ##",
-    "/  "
+    " #",
+    "/ "
   ],
   "key": {
     "#": {
-      "item": "minecraft:gold_ingot"
+      "item": "almirisweapons:gold_mace_tip"
     },
     "/": {
       "item": "minecraft:stick"

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:gold_doubleedge_blade"
+    ]
+  },
+  "criteria": {
+    "has_gold_singleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:gold_singleedge_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:gold_doubleedge_blade"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gold_singleedge_blade",
+      "has_the_recipe"
+    ]
+  ]
+}

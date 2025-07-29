@@ -1,13 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " ##",
-    " ##",
-    "/  "
+    " #",
+    "/ "
   ],
   "key": {
     "#": {
-      "item": "minecraft:netherite_ingot"
+      "item": "almirisweapons:netherite_mace_tip"
     },
     "/": {
       "item": "minecraft:stick"

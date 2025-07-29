@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:stone_doubleedge_blade"
+    ]
+  },
+  "criteria": {
+    "has_stone_singleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:stone_singleedge_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:stone_doubleedge_blade"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stone_singleedge_blade",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -6,18 +6,6 @@
     ]
   },
   "criteria": {
-    "has_gold_ingot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:gold_ingot"
-            ]
-          }
-        ]
-      }
-    },
     "has_stick": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -25,6 +13,30 @@
           {
             "items": [
               "minecraft:stick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_gold_stabbing_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:gold_stabbing_tip"
+            ]
+          }
+        ]
+      }
+    },
+    "has_gold_axe_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:gold_axe_tip"
             ]
           }
         ]
@@ -39,8 +51,9 @@
   },
   "requirements": [
     [
-      "has_gold_ingot",
       "has_stick",
+      "has_gold_stabbing_tip",
+      "has_gold_axe_tip",
       "has_the_recipe"
     ]
   ]

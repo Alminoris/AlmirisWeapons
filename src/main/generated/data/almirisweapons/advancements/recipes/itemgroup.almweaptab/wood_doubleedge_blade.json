@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:wood_doubleedge_blade"
+    ]
+  },
+  "criteria": {
+    "has_wood_singleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:wood_singleedge_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:wood_doubleedge_blade"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wood_singleedge_blade",
+      "has_the_recipe"
+    ]
+  ]
+}

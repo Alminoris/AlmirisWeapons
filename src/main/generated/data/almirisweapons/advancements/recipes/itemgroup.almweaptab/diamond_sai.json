@@ -6,25 +6,25 @@
     ]
   },
   "criteria": {
-    "has_diamond": {
+    "has_diamond_stabbing_tip": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diamond"
+              "almirisweapons:diamond_stabbing_tip"
             ]
           }
         ]
       }
     },
-    "has_stick": {
+    "has_small_stick": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stick"
+              "almirisweapons:small_stick"
             ]
           }
         ]
@@ -39,8 +39,8 @@
   },
   "requirements": [
     [
-      "has_diamond",
-      "has_stick",
+      "has_diamond_stabbing_tip",
+      "has_small_stick",
       "has_the_recipe"
     ]
   ]

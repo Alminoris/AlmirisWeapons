@@ -11,7 +11,7 @@
 		"homepage": "",
 		"sources": "https://github.com/Alminoris/AlmirisWeapons"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/almirisweapons/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -29,7 +29,7 @@
 		"almirisweapons.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.13",
+		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.18.2",
 		"java": ">=17",
 		"fabric-api": "*"

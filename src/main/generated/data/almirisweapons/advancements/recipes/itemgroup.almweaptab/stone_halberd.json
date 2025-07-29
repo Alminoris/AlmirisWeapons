@@ -18,6 +18,30 @@
         ]
       }
     },
+    "has_stone_stabbing_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:stone_stabbing_tip"
+            ]
+          }
+        ]
+      }
+    },
+    "has_stone_axe_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:stone_axe_tip"
+            ]
+          }
+        ]
+      }
+    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
@@ -28,6 +52,8 @@
   "requirements": [
     [
       "has_stick",
+      "has_stone_stabbing_tip",
+      "has_stone_axe_tip",
       "has_the_recipe"
     ]
   ]
