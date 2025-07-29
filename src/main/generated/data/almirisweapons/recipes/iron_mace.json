@@ -3,16 +3,15 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:iron_ingot"
+      "item": "almirisweapons:iron_mace_tip"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    " ##",
-    " ##",
-    "/  "
+    " #",
+    "/ "
   ],
   "result": {
     "item": "almirisweapons:iron_mace"

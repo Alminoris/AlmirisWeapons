@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diamond_sword": {
+    "has_diamond_doubleedge_blade": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diamond_sword"
+              "almirisweapons:diamond_doubleedge_blade"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stick": {
+    "has_diamond_sword": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stick"
+              "minecraft:diamond_sword"
             ]
           }
         ]
@@ -35,7 +35,7 @@
   "requirements": [
     [
       "has_diamond_sword",
-      "has_stick",
+      "has_diamond_doubleedge_blade",
       "has_the_recipe"
     ]
   ],

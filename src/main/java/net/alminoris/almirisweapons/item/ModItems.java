@@ -50,6 +50,13 @@ public class ModItems
 
         for(String name : WeaponSetsHelper.MATERIALS)
         {
+            STABBING_TIPS.put(name, registerItem(name+"_stabbing_tip", new Item(new Item.Settings())));
+            MACE_TIPS.put(name, registerItem(name+"_mace_tip", new Item(new Item.Settings())));
+            AXE_TIPS.put(name, registerItem(name+"_axe_tip", new Item(new Item.Settings())));
+            DOUBLEEDGE_BLADES.put(name, registerItem(name+"_doubleedge_blade", new Item(new Item.Settings())));
+            SINGLEEDGE_BLADES.put(name, registerItem(name+"_singleedge_blade", new Item(new Item.Settings())));
+            CURVED_BLADES.put(name, registerItem(name+"_curved_blade", new Item(new Item.Settings())));
+
             HALBERDS.put(name, registerItem(name+"_halberd", new SwordItem(TOOL_MATERIALS.get(name), 4, -3.0f, new Item.Settings().maxCount(1))));
             RAPIERS.put(name, registerItem(name+"_rapier", new SwordItem(TOOL_MATERIALS.get(name), 2, -2.0f, new Item.Settings().maxCount(1))));
             CLAYMORES.put(name, registerItem(name+"_claymore", new SwordItem(TOOL_MATERIALS.get(name), 5, -3.0f, new Item.Settings().maxCount(1))));
