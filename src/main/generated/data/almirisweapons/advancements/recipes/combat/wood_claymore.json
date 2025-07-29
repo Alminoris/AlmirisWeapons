@@ -1,23 +1,23 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stick": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:stick"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "almirisweapons:wood_claymore"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_doubleedge_blade": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:wood_doubleedge_blade"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     },
     "has_wooden_sword": {
       "conditions": {
@@ -35,7 +35,7 @@
   "requirements": [
     [
       "has_wooden_sword",
-      "has_stick",
+      "has_wood_doubleedge_blade",
       "has_the_recipe"
     ]
   ],

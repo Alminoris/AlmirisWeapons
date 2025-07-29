@@ -25,8 +25,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
             getOrCreateTagBuilder(ItemTags.SWORDS)
                     .add(ModItems.HALBERDS.get(name))
                     .add(ModItems.SAI.get(name))
-                    .add(ModItems.RAPIERS.get(name))
                     .add(ModItems.CLAYMORES.get(name))
+                    .add(ModItems.SCYTHES.get(name))
+                    .add(ModItems.ODACHIS.get(name))
+                    .add(ModItems.KATANAS.get(name))
+                    .add(ModItems.DAGGERS.get(name))
+                    .add(ModItems.GLAIVES.get(name))
+                    .add(ModItems.BATTLE_STAVES.get(name))
+                    .add(ModItems.RAPIERS.get(name))
                     .add(ModItems.MACES.get(name));
 
             getOrCreateTagBuilder(ItemTags.AXES)

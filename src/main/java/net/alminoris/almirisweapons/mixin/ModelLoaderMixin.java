@@ -44,4 +44,54 @@ public abstract class ModelLoaderMixin
             this.addModel(id);
         }
     }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addGlaive(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_glaive_3d"), "inventory");
+            this.addModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addBattleStaff(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_battle_staff_3d"), "inventory");
+            this.addModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addScythe(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_scythe_3d"), "inventory");
+            this.addModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addKatana(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_katana_3d"), "inventory");
+            this.addModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addOdachi(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_odachi_3d"), "inventory");
+            this.addModel(id);
+        }
+    }
 }

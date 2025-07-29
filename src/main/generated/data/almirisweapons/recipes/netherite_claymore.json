@@ -3,15 +3,15 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:netherite_sword"
+      "item": "almirisweapons:netherite_doubleedge_blade"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "minecraft:netherite_sword"
     }
   },
   "pattern": [
-    " # ",
-    "/  "
+    " #",
+    "/ "
   ],
   "result": {
     "item": "almirisweapons:netherite_claymore"

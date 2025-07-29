@@ -3,16 +3,15 @@
   "category": "equipment",
   "key": {
     "#": {
-      "tag": "minecraft:stone_tool_materials"
+      "item": "almirisweapons:stone_mace_tip"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    " ##",
-    " ##",
-    "/  "
+    " #",
+    "/ "
   ],
   "result": {
     "item": "almirisweapons:stone_mace"
