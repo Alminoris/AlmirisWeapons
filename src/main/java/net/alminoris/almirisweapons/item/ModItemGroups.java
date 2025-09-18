@@ -35,12 +35,24 @@ public class ModItemGroups
                             entries.add(ModItems.SCYTHES.get(name));
                             entries.add(ModItems.ODACHIS.get(name));
 
+                            entries.add(ModItems.DANE_AXES.get(name));
+                            entries.add(ModItems.BEARDED_AXES.get(name));
+                            entries.add(ModItems.KATARS.get(name));
+                            entries.add(ModItems.ARQUEBUSES.get(name));
+                            entries.add(ModItems.BLUNDERBUSSES.get(name));
+                            entries.add(ModItems.MATCHLOCK_PISTOLS.get(name));
+
                             entries.add(ModItems.STABBING_TIPS.get(name));
                             entries.add(ModItems.AXE_TIPS.get(name));
                             entries.add(ModItems.MACE_TIPS.get(name));
                             entries.add(ModItems.SINGLEEDGE_BLADES.get(name));
                             entries.add(ModItems.DOUBLEEDGE_BLADES.get(name));
                             entries.add(ModItems.CURVED_BLADES.get(name));
+                            entries.add(ModItems.ARQUEBUS_BARRELS.get(name));
+                            entries.add(ModItems.BLUNDERBUSS_BARRELS.get(name));
+                            entries.add(ModItems.PISTOL_BARRELS.get(name));
+                            entries.add(ModItems.MATCHLOCK_MECHANISMS.get(name));
+                            entries.add(ModItems.GUN_STOCKS.get(name));
                         }
 
                         entries.add(ModItems.SMALL_STICK);

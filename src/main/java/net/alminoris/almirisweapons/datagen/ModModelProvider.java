@@ -46,6 +46,11 @@ public class ModModelProvider extends FabricModelProvider
             itemModelGenerator.register(ModItems.CURVED_BLADES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.SINGLEEDGE_BLADES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.DOUBLEEDGE_BLADES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.ARQUEBUS_BARRELS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.BLUNDERBUSS_BARRELS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.PISTOL_BARRELS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.MATCHLOCK_MECHANISMS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.GUN_STOCKS.get(name), Models.GENERATED);
         }
     }
 }

@@ -24,6 +24,7 @@ public class ModItems
     public static final Dictionary<String, Item> BATTLE_AXES = new Hashtable<>();
     public static final Dictionary<String, Item> SAI = new Hashtable<>();
     public static final Dictionary<String, Item> MACES = new Hashtable<>();
+
     public static final Dictionary<String, Item> SCYTHES = new Hashtable<>();
     public static final Dictionary<String, Item> KATANAS = new Hashtable<>();
     public static final Dictionary<String, Item> ODACHIS = new Hashtable<>();
@@ -31,12 +32,25 @@ public class ModItems
     public static final Dictionary<String, Item> DAGGERS = new Hashtable<>();
     public static final Dictionary<String, Item> GLAIVES = new Hashtable<>();
 
+    public static final Dictionary<String, Item> ARQUEBUSES = new Hashtable<>();
+    public static final Dictionary<String, Item> BLUNDERBUSSES = new Hashtable<>();
+    public static final Dictionary<String, Item> MATCHLOCK_PISTOLS = new Hashtable<>();
+    public static final Dictionary<String, Item> DANE_AXES = new Hashtable<>();
+    public static final Dictionary<String, Item> BEARDED_AXES = new Hashtable<>();
+    public static final Dictionary<String, Item> KATARS = new Hashtable<>();
+
     public static final Dictionary<String, Item> STABBING_TIPS = new Hashtable<>();
     public static final Dictionary<String, Item> MACE_TIPS = new Hashtable<>();
     public static final Dictionary<String, Item> AXE_TIPS = new Hashtable<>();
     public static final Dictionary<String, Item> DOUBLEEDGE_BLADES = new Hashtable<>();
     public static final Dictionary<String, Item> SINGLEEDGE_BLADES = new Hashtable<>();
     public static final Dictionary<String, Item> CURVED_BLADES = new Hashtable<>();
+    public static final Dictionary<String, Item> ARQUEBUS_BARRELS = new Hashtable<>();
+    public static final Dictionary<String, Item> BLUNDERBUSS_BARRELS = new Hashtable<>();
+    public static final Dictionary<String, Item> PISTOL_BARRELS = new Hashtable<>();
+    public static final Dictionary<String, Item> MATCHLOCK_MECHANISMS = new Hashtable<>();
+    public static final Dictionary<String, Item> GUN_STOCKS = new Hashtable<>();
+
 
     public static final Item SMALL_STICK = registerItem("small_stick", new Item(new Item.Settings()));
 
