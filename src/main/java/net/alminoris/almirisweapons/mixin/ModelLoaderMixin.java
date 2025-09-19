@@ -94,4 +94,45 @@ public abstract class ModelLoaderMixin
             this.loadItemModel(id);
         }
     }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addDaneAxe(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_dane_axe_3d"), "inventory");
+            this.loadItemModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addKatar(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_katar_3d"), "inventory");
+            this.loadItemModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addArquebus(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci)
+    {
+        ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, "arquebus_3d"), "inventory");
+        this.loadItemModel(id);
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addBlunderbuss(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci)
+    {
+        ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, "blunderbuss_3d"), "inventory");
+        this.loadItemModel(id);
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addMatchlockPistol(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci)
+    {
+        ModelIdentifier id = new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, "matchlock_pistol_3d"), "inventory");
+        this.loadItemModel(id);
+    }
 }

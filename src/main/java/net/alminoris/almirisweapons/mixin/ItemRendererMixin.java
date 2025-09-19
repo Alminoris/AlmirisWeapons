@@ -116,4 +116,65 @@ public abstract class ItemRendererMixin
 
         return value;
     }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useDaneAxeModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        for(String name : MATERIALS)
+        {
+            if (stack.isOf(DANE_AXES.get(name)) && renderMode != ModelTransformationMode.GUI)
+            {
+                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_dane_axe_3d"), "inventory"));
+            }
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useKatarModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        for(String name : MATERIALS)
+        {
+            if (stack.isOf(KATARS.get(name)) && renderMode != ModelTransformationMode.GUI)
+            {
+                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, name+"_katar_3d"), "inventory"));
+            }
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useArquebusModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        if (stack.isOf(ARQUEBUS) && renderMode != ModelTransformationMode.GUI)
+        {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, "arquebus_3d"), "inventory"));
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useBlunderbussModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        if (stack.isOf(BLUNDERBUSS) && renderMode != ModelTransformationMode.GUI)
+        {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, "blunderbuss_3d"), "inventory"));
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useMatchlockPistolModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        if (stack.isOf(MATCHLOCK_PISTOL) && renderMode != ModelTransformationMode.GUI)
+        {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(Identifier.of(AlmirisWeapons.MOD_ID, "matchlock_pistol_3d"), "inventory"));
+        }
+
+        return value;
+    }
 }

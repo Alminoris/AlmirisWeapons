@@ -27,6 +27,16 @@ public class ModModelProvider extends FabricModelProvider
     {
         itemModelGenerator.register(ModItems.SMALL_STICK, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.ARQUEBUS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLUNDERBUSS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MATCHLOCK_PISTOL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BULLET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARQUEBUS_BARREL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLUNDERBUSS_BARREL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PISTOL_BARREL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MATCHLOCK_MECHANISM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GUN_STOCK, Models.GENERATED);
+
         for (String name : MATERIALS)
         {
             itemModelGenerator.register(ModItems.HALBERDS.get(name), Models.GENERATED);
@@ -37,7 +47,10 @@ public class ModModelProvider extends FabricModelProvider
             itemModelGenerator.register(ModItems.ODACHIS.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.KATANAS.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.SCYTHES.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.KATARS.get(name), Models.GENERATED);
+            itemModelGenerator.register(ModItems.DANE_AXES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.BATTLE_AXES.get(name), Models.HANDHELD);
+            itemModelGenerator.register(ModItems.BEARDED_AXES.get(name), Models.HANDHELD);
             itemModelGenerator.register(ModItems.MACES.get(name), Models.HANDHELD);
 
             itemModelGenerator.register(ModItems.STABBING_TIPS.get(name), Models.GENERATED);
@@ -46,11 +59,6 @@ public class ModModelProvider extends FabricModelProvider
             itemModelGenerator.register(ModItems.CURVED_BLADES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.SINGLEEDGE_BLADES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.DOUBLEEDGE_BLADES.get(name), Models.GENERATED);
-            itemModelGenerator.register(ModItems.ARQUEBUS_BARRELS.get(name), Models.GENERATED);
-            itemModelGenerator.register(ModItems.BLUNDERBUSS_BARRELS.get(name), Models.GENERATED);
-            itemModelGenerator.register(ModItems.PISTOL_BARRELS.get(name), Models.GENERATED);
-            itemModelGenerator.register(ModItems.MATCHLOCK_MECHANISMS.get(name), Models.GENERATED);
-            itemModelGenerator.register(ModItems.GUN_STOCKS.get(name), Models.GENERATED);
         }
     }
 }

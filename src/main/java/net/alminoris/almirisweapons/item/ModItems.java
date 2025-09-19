@@ -1,6 +1,10 @@
 package net.alminoris.almirisweapons.item;
 
 import net.alminoris.almirisweapons.AlmirisWeapons;
+import net.alminoris.almirisweapons.item.custom.ArquebusItem;
+import net.alminoris.almirisweapons.item.custom.BlunderbussItem;
+import net.alminoris.almirisweapons.item.custom.BulletItem;
+import net.alminoris.almirisweapons.item.custom.MatchlockPistolItem;
 import net.alminoris.almirisweapons.util.helper.WeaponHelper;
 import net.alminoris.almirisweapons.util.helper.WeaponSetsHelper;
 import net.minecraft.item.AxeItem;
@@ -32,9 +36,6 @@ public class ModItems
     public static final Dictionary<String, Item> DAGGERS = new Hashtable<>();
     public static final Dictionary<String, Item> GLAIVES = new Hashtable<>();
 
-    public static final Dictionary<String, Item> ARQUEBUSES = new Hashtable<>();
-    public static final Dictionary<String, Item> BLUNDERBUSSES = new Hashtable<>();
-    public static final Dictionary<String, Item> MATCHLOCK_PISTOLS = new Hashtable<>();
     public static final Dictionary<String, Item> DANE_AXES = new Hashtable<>();
     public static final Dictionary<String, Item> BEARDED_AXES = new Hashtable<>();
     public static final Dictionary<String, Item> KATARS = new Hashtable<>();
@@ -45,14 +46,18 @@ public class ModItems
     public static final Dictionary<String, Item> DOUBLEEDGE_BLADES = new Hashtable<>();
     public static final Dictionary<String, Item> SINGLEEDGE_BLADES = new Hashtable<>();
     public static final Dictionary<String, Item> CURVED_BLADES = new Hashtable<>();
-    public static final Dictionary<String, Item> ARQUEBUS_BARRELS = new Hashtable<>();
-    public static final Dictionary<String, Item> BLUNDERBUSS_BARRELS = new Hashtable<>();
-    public static final Dictionary<String, Item> PISTOL_BARRELS = new Hashtable<>();
-    public static final Dictionary<String, Item> MATCHLOCK_MECHANISMS = new Hashtable<>();
-    public static final Dictionary<String, Item> GUN_STOCKS = new Hashtable<>();
 
+    public static final Item ARQUEBUS = registerItem("arquebus", new ArquebusItem(new Item.Settings()));
+    public static final Item BLUNDERBUSS = registerItem("blunderbuss", new BlunderbussItem(new Item.Settings()));
+    public static final Item MATCHLOCK_PISTOL = registerItem("matchlock_pistol", new MatchlockPistolItem(new Item.Settings()));
 
+    public static final Item ARQUEBUS_BARREL = registerItem("arquebus_barrel", new Item(new Item.Settings()));
+    public static final Item BLUNDERBUSS_BARREL = registerItem("blunderbuss_barrel", new Item(new Item.Settings()));
+    public static final Item PISTOL_BARREL = registerItem("pistol_barrel", new Item(new Item.Settings()));
+    public static final Item MATCHLOCK_MECHANISM = registerItem("matchlock_mechanism", new Item(new Item.Settings()));
+    public static final Item GUN_STOCK = registerItem("gun_stock", new Item(new Item.Settings()));
     public static final Item SMALL_STICK = registerItem("small_stick", new Item(new Item.Settings()));
+    public static final Item BULLET = registerItem("bullet", new BulletItem(new Item.Settings()));
 
     public static final Dictionary<String, Item> MATERIAL_ITEMS = new Hashtable<>();
 
@@ -97,6 +102,15 @@ public class ModItems
                     .attributeModifiers(WeaponHelper.createAttributes(TOOL_MATERIALS.get(name), 4D, -2.6D)))));
             ODACHIS.put(name, registerItem(name+"_odachi", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
                     .attributeModifiers(WeaponHelper.createAttributes(TOOL_MATERIALS.get(name), 5.75D, -3.25D)))));
+
+            DANE_AXES.put(name, registerItem(name+"_dane_axe", new AxeItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
+                    .attributeModifiers(WeaponHelper.createAttributes(TOOL_MATERIALS.get(name), 7, -3.2D)))));
+
+            BEARDED_AXES.put(name, registerItem(name+"_bearded_axe", new AxeItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
+                    .attributeModifiers(WeaponHelper.createAttributes(TOOL_MATERIALS.get(name), 5, -2.8D)))));
+
+            KATARS.put(name, registerItem(name+"_katar", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
+                    .attributeModifiers(WeaponHelper.createAttributes(TOOL_MATERIALS.get(name), 2D, -2D)))));
         }
     }
 
