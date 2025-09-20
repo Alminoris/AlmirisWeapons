@@ -25,8 +25,8 @@ public class BulletItem extends ArrowItem {
     @Override
     public ProjectileEntity createEntity(World world, Position pos, ItemStack stack, Direction direction)
     {
-        BulletEntity silentArrowEntity = new BulletEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack.copyWithCount(1), null);
-        silentArrowEntity.pickupType = PersistentProjectileEntity.PickupPermission.DISALLOWED;
-        return silentArrowEntity;
+        BulletEntity bulletEntity = new BulletEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack.copyWithCount(1), null);
+        bulletEntity.pickupType = PersistentProjectileEntity.PickupPermission.DISALLOWED;
+        return bulletEntity;
     }
 }

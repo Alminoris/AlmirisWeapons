@@ -18,12 +18,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class ArquebusItem extends net.minecraft.item.Item {
+public class FirearmItem extends net.minecraft.item.Item {
 
     private static final Map<UUID, Integer> pullTicks = new HashMap<>();
     protected final FirearmConfig config;
 
-    public ArquebusItem(Settings settings, FirearmConfig config) {
+    public FirearmItem(Settings settings, FirearmConfig config) {
         super(settings);
         this.config = config;
     }

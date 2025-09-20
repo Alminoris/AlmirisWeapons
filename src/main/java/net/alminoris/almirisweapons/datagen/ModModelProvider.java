@@ -27,9 +27,9 @@ public class ModModelProvider extends FabricModelProvider
     {
         itemModelGenerator.register(ModItems.SMALL_STICK, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.ARQUEBUS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.BLUNDERBUSS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MATCHLOCK_PISTOL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARQUEBUS, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BLUNDERBUSS, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MATCHLOCK_PISTOL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BULLET, Models.GENERATED);
         itemModelGenerator.register(ModItems.ARQUEBUS_BARREL, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLUNDERBUSS_BARREL, Models.GENERATED);
@@ -51,7 +51,7 @@ public class ModModelProvider extends FabricModelProvider
             itemModelGenerator.register(ModItems.DANE_AXES.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.BATTLE_AXES.get(name), Models.HANDHELD);
             itemModelGenerator.register(ModItems.BEARDED_AXES.get(name), Models.HANDHELD);
-            itemModelGenerator.register(ModItems.MACES.get(name), Models.HANDHELD);
+            itemModelGenerator.register(ModItems.MACES.get(name), Models.HANDHELD_MACE);
 
             itemModelGenerator.register(ModItems.STABBING_TIPS.get(name), Models.GENERATED);
             itemModelGenerator.register(ModItems.MACE_TIPS.get(name), Models.GENERATED);

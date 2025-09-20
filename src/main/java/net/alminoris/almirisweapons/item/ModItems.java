@@ -1,19 +1,19 @@
 package net.alminoris.almirisweapons.item;
 
 import net.alminoris.almirisweapons.AlmirisWeapons;
-import net.alminoris.almirisweapons.item.custom.ArquebusItem;
-import net.alminoris.almirisweapons.item.custom.BlunderbussItem;
-import net.alminoris.almirisweapons.item.custom.BulletItem;
-import net.alminoris.almirisweapons.item.custom.MatchlockPistolItem;
+import net.alminoris.almirisweapons.item.custom.*;
+import net.alminoris.almirisweapons.sound.ModSounds;
 import net.alminoris.almirisweapons.util.helper.WeaponHelper;
 import net.alminoris.almirisweapons.util.helper.WeaponSetsHelper;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.UseAction;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -46,10 +46,6 @@ public class ModItems
     public static final Dictionary<String, Item> DOUBLEEDGE_BLADES = new Hashtable<>();
     public static final Dictionary<String, Item> SINGLEEDGE_BLADES = new Hashtable<>();
     public static final Dictionary<String, Item> CURVED_BLADES = new Hashtable<>();
-
-    public static final Item ARQUEBUS = registerItem("arquebus", new ArquebusItem(new Item.Settings()));
-    public static final Item BLUNDERBUSS = registerItem("blunderbuss", new BlunderbussItem(new Item.Settings()));
-    public static final Item MATCHLOCK_PISTOL = registerItem("matchlock_pistol", new MatchlockPistolItem(new Item.Settings()));
 
     public static final Item ARQUEBUS_BARREL = registerItem("arquebus_barrel", new Item(new Item.Settings()));
     public static final Item BLUNDERBUSS_BARREL = registerItem("blunderbuss_barrel", new Item(new Item.Settings()));
@@ -112,6 +108,107 @@ public class ModItems
             KATARS.put(name, registerItem(name+"_katar", new SwordItem(TOOL_MATERIALS.get(name), new Item.Settings().maxCount(1)
                     .attributeModifiers(WeaponHelper.createAttributes(TOOL_MATERIALS.get(name), 2D, -2D)))));
         }
+    }
+
+    public static final Item ARQUEBUS = registerFirearm("arquebus", new ArquebusItem(new Item.Settings().maxCount(1),new FirearmConfig.Builder()
+            .useAction(UseAction.BOW)
+            .maxUseTime(72000)
+            .minUseTicks(5)
+            .reloadTicks(40)
+            .ammoPerShot(1)
+            .projectilesPerShot(1)
+            .damage(6.0)
+            .velocity(3.0f)
+            .inaccuracy(1.0f)
+            .spreadAngle(5f)
+            .recoilStrength(0.2)
+            .recoilVertical(0.1)
+            .misfireChance(0.05f)
+            .shootSound(ModSounds.ARQUEBUS_SHOT)
+            .misfireSound(ModSounds.MISFIRE)
+            .reloadSound(ModSounds.ARQUEBUS_RELOAD)
+            .soundVolume(1f)
+            .soundPitch(1f)
+            .reloadVolume(1f)
+            .reloadPitch(1f)
+            .reloadParticle(ParticleTypes.SMOKE)
+            .reloadParticleCount(5)
+            .smokeParticle(ParticleTypes.SMOKE)
+            .smokeCount(3)
+            .smokeSpread(0.1)
+            .smokeSpeed(0.02)
+            .flameParticle(ParticleTypes.FLAME)
+            .flameCount(2)
+            .build()
+    ));
+
+    public static final Item BLUNDERBUSS = registerItem("blunderbuss", new BlunderbussItem(new Item.Settings().maxCount(1),new FirearmConfig.Builder()
+            .useAction(UseAction.BOW)
+            .maxUseTime(72000)
+            .minUseTicks(7)
+            .reloadTicks(50)
+            .ammoPerShot(1)
+            .projectilesPerShot(5)
+            .damage(4.0)
+            .velocity(2.5f)
+            .inaccuracy(2.0f)
+            .spreadAngle(15f)
+            .recoilStrength(0.4)
+            .recoilVertical(0.15)
+            .misfireChance(0.1f)
+            .shootSound(ModSounds.BLUNDERBUSS_SHOT)
+            .misfireSound(ModSounds.MISFIRE)
+            .reloadSound(ModSounds.BLUNDERBUSS_RELOAD)
+            .soundVolume(1f)
+            .soundPitch(1f)
+            .reloadVolume(1f)
+            .reloadPitch(1f)
+            .reloadParticle(ParticleTypes.SMOKE)
+            .reloadParticleCount(7)
+            .smokeParticle(ParticleTypes.SMOKE)
+            .smokeCount(5)
+            .smokeSpread(0.2)
+            .smokeSpeed(0.03)
+            .flameParticle(ParticleTypes.FLAME)
+            .flameCount(3)
+            .build()
+    ));
+
+    public static final Item MATCHLOCK_PISTOL = registerItem("matchlock_pistol", new MatchlockPistolItem(new Item.Settings().maxCount(1), new FirearmConfig.Builder()
+            .useAction(UseAction.BOW)
+            .maxUseTime(72000)
+            .minUseTicks(6)
+            .reloadTicks(45)
+            .ammoPerShot(1)
+            .projectilesPerShot(1)
+            .damage(5.0)
+            .velocity(3.2f)
+            .inaccuracy(1.5f)
+            .spreadAngle(7f)
+            .recoilStrength(0.25)
+            .recoilVertical(0.12)
+            .misfireChance(0.08f)
+            .shootSound(ModSounds.MATCHLOCK_PISTOL_SHOT)
+            .misfireSound(ModSounds.MISFIRE)
+            .reloadSound(ModSounds.MATCHLOCK_PISTOL_RELOAD)
+            .soundVolume(1f)
+            .soundPitch(1f)
+            .reloadVolume(1f)
+            .reloadPitch(1f)
+            .reloadParticle(ParticleTypes.SMOKE)
+            .reloadParticleCount(6)
+            .smokeParticle(ParticleTypes.SMOKE)
+            .smokeCount(4)
+            .smokeSpread(0.15)
+            .smokeSpeed(0.025)
+            .flameParticle(ParticleTypes.FLAME)
+            .flameCount(2)
+            .build())
+    );
+
+    private static Item registerFirearm(String name, Item firearmItem)
+    {
+        return Registry.register(Registries.ITEM, Identifier.of(AlmirisWeapons.MOD_ID, name), firearmItem);
     }
 
     private static Item registerItem(String name, Item item)

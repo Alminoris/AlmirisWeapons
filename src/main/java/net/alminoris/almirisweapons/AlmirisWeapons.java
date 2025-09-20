@@ -2,6 +2,7 @@ package net.alminoris.almirisweapons;
 
 import net.alminoris.almirisweapons.item.ModItemGroups;
 import net.alminoris.almirisweapons.item.ModItems;
+import net.alminoris.almirisweapons.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class AlmirisWeapons implements ModInitializer
 	{
 		ModItems.registerItems();
 		ModItemGroups.registerItemGroups();
+		ModSounds.registerSounds();
 
 		LOGGER.info("Almiris Weapons MOD Initialization");
 	}

@@ -9,6 +9,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.hit.EntityHitResult;
@@ -24,10 +25,12 @@ public class BulletEntity extends PersistentProjectileEntity {
 
     public BulletEntity(World world, LivingEntity owner, ItemStack stack, @Nullable ItemStack shotFrom) {
         super(ModEntities.BULLET, owner, world, stack, shotFrom);
+        this.pickupType = PickupPermission.DISALLOWED;
     }
 
     public BulletEntity(World world, double x, double y, double z, ItemStack stack, @Nullable ItemStack shotFrom) {
         super(ModEntities.BULLET, x, y, z, world, stack, shotFrom);
+        this.pickupType = PickupPermission.DISALLOWED;
     }
 
     @Override
@@ -45,7 +48,6 @@ public class BulletEntity extends PersistentProjectileEntity {
 
         if (!this.getWorld().isClient) {
             if (entityHitResult.getEntity() instanceof LivingEntity target) {
-
                 DamageSource source = this.getWorld().getDamageSources().arrow(this, this.getOwner() instanceof LivingEntity shooter ? shooter : null);
 
                 target.damage(source, (float) this.damage);
@@ -60,6 +62,17 @@ public class BulletEntity extends PersistentProjectileEntity {
     @Override
     protected ItemStack getDefaultItemStack() {
         return new ItemStack(ModItems.BULLET);
+    }
+
+    @Override
+    public void onRemoved() {
+        super.onRemoved();
+        if (!this.getWorld().isClient) {
+            int count = this.random.nextBetween(0, 2);
+            if (count > 0) {
+                this.dropStack(new ItemStack(Items.IRON_NUGGET, count));
+            }
+        }
     }
 
     @Override
