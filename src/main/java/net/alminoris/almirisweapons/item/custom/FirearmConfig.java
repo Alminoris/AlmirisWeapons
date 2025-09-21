@@ -4,18 +4,11 @@ import net.minecraft.particle.ParticleEffect;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.UseAction;
 
-/**
- * Конфіг для будь-якої вогнепальної зброї.
- * Передається в конструктор FirearmItem.
- */
 public record FirearmConfig(
-        // Використання
         UseAction useAction,
         int maxUseTime,
         int minUseTicks,
         int reloadTicks,
-
-        // Бойові параметри
         int ammoPerShot,
         int projectilesPerShot,
         double damage,
@@ -25,8 +18,6 @@ public record FirearmConfig(
         double recoilStrength,
         double recoilVertical,
         float misfireChance,
-
-        // Звуки
         SoundEvent reloadSound,
         float reloadVolume,
         float reloadPitch,
@@ -34,8 +25,6 @@ public record FirearmConfig(
         SoundEvent misfireSound,
         float soundVolume,
         float soundPitch,
-
-        // Частинки
         ParticleEffect reloadParticle,
         int reloadParticleCount,
         ParticleEffect smokeParticle,
@@ -43,9 +32,10 @@ public record FirearmConfig(
         double smokeSpread,
         double smokeSpeed,
         ParticleEffect flameParticle,
-        int flameCount
-) {
-    public static class Builder {
+        int flameCount)
+{
+    public static class Builder
+    {
         private UseAction useAction = UseAction.BOW;
         private int maxUseTime = 72000, minUseTicks = 5, reloadTicks = 40;
         private int ammoPerShot = 1, projectilesPerShot = 1;
@@ -86,7 +76,8 @@ public record FirearmConfig(
         public Builder flameParticle(ParticleEffect val) { this.flameParticle = val; return this; }
         public Builder flameCount(int val) { this.flameCount = val; return this; }
 
-        public FirearmConfig build() {
+        public FirearmConfig build()
+        {
             return new FirearmConfig(
                     useAction, maxUseTime, minUseTicks, reloadTicks,
                     ammoPerShot, projectilesPerShot, damage, velocity, inaccuracy, spreadAngle,
@@ -95,8 +86,7 @@ public record FirearmConfig(
                     shootSound, misfireSound, soundVolume, soundPitch,
                     reloadParticle, reloadParticleCount,
                     smokeParticle, smokeCount, smokeSpread, smokeSpeed,
-                    flameParticle, flameCount
-            );
+                    flameParticle, flameCount);
         }
     }
 }

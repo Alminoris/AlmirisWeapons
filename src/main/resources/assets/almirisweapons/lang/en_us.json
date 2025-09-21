@@ -136,5 +136,11 @@
   "item.almirisweapons.gun_stock": "Gun Stock",
   "item.almirisweapons.small_stick": "Small Stick",
   "item.almirisweapons.bullet": "Bullet",
-  "entity.almirisweapons.bullet": "Bullet"
+  "entity.almirisweapons.bullet": "Bullet",
+  "message.almirisweapons.misfire": "Misfire!",
+  "message.almirisweapons.no_ammo": "No ammo!",
+  "tooltip.almirisweapons.damage": "Damage",
+  "tooltip.almirisweapons.reload_time": "Reload",
+  "tooltip.almirisweapons.ammo_per_shot": "Ammo per Shot",
+  "tooltip.almirisweapons.misfire": "Misfire Chance"
 }

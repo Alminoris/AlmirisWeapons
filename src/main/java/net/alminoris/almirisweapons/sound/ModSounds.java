@@ -14,6 +14,7 @@ public class ModSounds {
     public static final SoundEvent ARQUEBUS_RELOAD = registerSound("arquebus_reload");
     public static final SoundEvent BLUNDERBUSS_RELOAD = registerSound("blunderbuss_reload");
     public static final SoundEvent MATCHLOCK_PISTOL_RELOAD = registerSound("matchlock_pistol_reload");
+    public static final SoundEvent EMPTY = registerSound("empty");
 
     private static SoundEvent registerSound(String name) {
         Identifier id = Identifier.of(AlmirisWeapons.MOD_ID, name);
