@@ -191,7 +191,7 @@ public class ModItems
             .shootSound(ModSounds.MATCHLOCK_PISTOL_SHOT)
             .misfireSound(ModSounds.MISFIRE)
             .reloadSound(ModSounds.MATCHLOCK_PISTOL_RELOAD)
-            .soundVolume(1f)
+            .soundVolume(0.7f)
             .soundPitch(1f)
             .reloadVolume(1f)
             .reloadPitch(1f)
