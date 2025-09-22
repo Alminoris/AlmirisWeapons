@@ -91,4 +91,45 @@ public abstract class ModelLoaderMixin
             this.addModel(id);
         }
     }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addKatar(ResourceManager resourceManager, BlockColors blockColors, Profiler profiler, int mipmapLevel, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, name+"_katar_3d"), "inventory");
+            this.addModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addDaneAxe(ResourceManager resourceManager, BlockColors blockColors, Profiler profiler, int mipmapLevel, CallbackInfo ci)
+    {
+        for(String name : MATERIALS)
+        {
+            ModelIdentifier id = new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, name+"_dane_axe_3d"), "inventory");
+            this.addModel(id);
+        }
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addArquebus(ResourceManager resourceManager, BlockColors blockColors, Profiler profiler, int mipmapLevel, CallbackInfo ci)
+    {
+        ModelIdentifier id = new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, "arquebus_3d"), "inventory");
+        this.addModel(id);
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addBlunderbuss(ResourceManager resourceManager, BlockColors blockColors, Profiler profiler, int mipmapLevel, CallbackInfo ci)
+    {
+        ModelIdentifier id = new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, "blunderbuss_3d"), "inventory");
+        this.addModel(id);
+    }
+
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1, shift = At.Shift.AFTER))
+    public void addMatchlockPistol(ResourceManager resourceManager, BlockColors blockColors, Profiler profiler, int mipmapLevel, CallbackInfo ci)
+    {
+        ModelIdentifier id = new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, "matchlock_pistol_3d"), "inventory");
+        this.addModel(id);
+    }
 }
