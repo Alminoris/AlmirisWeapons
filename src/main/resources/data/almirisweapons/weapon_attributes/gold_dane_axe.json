@@ -1,5 +1,5 @@
 {
-  "parent": "dane_axe",
+  "parent": "almirisweapons:dane_axe",
   "attributes" : {
     "pose": "bettercombat:pose_two_handed_heavy",
     "category": "heavy_dane_axe",
