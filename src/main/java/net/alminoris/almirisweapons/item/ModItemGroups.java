@@ -35,6 +35,10 @@ public class ModItemGroups
                             entries.add(ModItems.SCYTHES.get(name));
                             entries.add(ModItems.ODACHIS.get(name));
 
+                            entries.add(ModItems.DANE_AXES.get(name));
+                            entries.add(ModItems.BEARDED_AXES.get(name));
+                            entries.add(ModItems.KATARS.get(name));
+
                             entries.add(ModItems.STABBING_TIPS.get(name));
                             entries.add(ModItems.AXE_TIPS.get(name));
                             entries.add(ModItems.MACE_TIPS.get(name));
@@ -42,6 +46,17 @@ public class ModItemGroups
                             entries.add(ModItems.DOUBLEEDGE_BLADES.get(name));
                             entries.add(ModItems.CURVED_BLADES.get(name));
                         }
+
+                        entries.add(ModItems.ARQUEBUS);
+                        entries.add(ModItems.BLUNDERBUSS);
+                        entries.add(ModItems.MATCHLOCK_PISTOL);
+                        entries.add(ModItems.BULLET);
+
+                        entries.add(ModItems.ARQUEBUS_BARREL);
+                        entries.add(ModItems.BLUNDERBUSS_BARREL);
+                        entries.add(ModItems.PISTOL_BARREL);
+                        entries.add(ModItems.MATCHLOCK_MECHANISM);
+                        entries.add(ModItems.GUN_STOCK);
 
                         entries.add(ModItems.SMALL_STICK);
                     }).build());

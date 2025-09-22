@@ -10,6 +10,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIALS;
@@ -169,6 +170,67 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .criterion(hasItem(Items.COBBLESTONE), conditionsFromItem(Items.COBBLESTONE))
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PISTOL_BARREL, 1)
+                .pattern("  #")
+                .pattern("*/ ")
+                .input('#', Items.IRON_INGOT)
+                .input('*', Items.IRON_NUGGET)
+                .input('/', ModItems.SMALL_STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(hasItem(ModItems.SMALL_STICK), conditionsFromItem(ModItems.SMALL_STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLUNDERBUSS_BARREL, 1)
+                .pattern("  #")
+                .pattern("*# ")
+                .pattern("*  ")
+                .input('#', Items.IRON_INGOT)
+                .input('*', Items.IRON_NUGGET)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ARQUEBUS_BARREL, 1)
+                .pattern("  #")
+                .pattern("*/ ")
+                .pattern("#  ")
+                .input('#', Items.IRON_INGOT)
+                .input('*', Items.IRON_NUGGET)
+                .input('/', Items.STICK)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MATCHLOCK_MECHANISM, 1)
+                .pattern("*  ")
+                .pattern("***")
+                .pattern("* *")
+                .input('*', Items.IRON_NUGGET)
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GUN_STOCK, 1)
+                .pattern(" #*")
+                .pattern("#* ")
+                .pattern("#  ")
+                .input('#', Items.STICK)
+                .input('*', ModItems.SMALL_STICK)
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .criterion(hasItem(ModItems.SMALL_STICK), conditionsFromItem(ModItems.SMALL_STICK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BULLET, 2)
+                .pattern(" * ")
+                .pattern("*#*")
+                .pattern(" * ")
+                .input('#', Items.IRON_INGOT)
+                .input('*', Items.IRON_NUGGET)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(recipeExporter);
+
         for (String name : MATERIALS)
         {
             if (!name.equals("wood") && !name.equals("stone"))
@@ -281,6 +343,36 @@ public class ModRecipeProvider extends FabricRecipeProvider
                     .criterion(hasItem(ModItems.SMALL_STICK), conditionsFromItem(ModItems.SMALL_STICK))
                     .offerTo(recipeExporter);
 
+            ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATARS.get(name), 1)
+                    .pattern(" # ")
+                    .pattern("/#/")
+                    .pattern("/ /")
+                    .input('#', ModItems.STABBING_TIPS.get(name))
+                    .input('/', ModItems.SMALL_STICK)
+                    .criterion(hasItem(ModItems.STABBING_TIPS.get(name)), conditionsFromItem(ModItems.STABBING_TIPS.get(name)))
+                    .criterion(hasItem(ModItems.SMALL_STICK), conditionsFromItem(ModItems.SMALL_STICK))
+                    .offerTo(recipeExporter);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.DANE_AXES.get(name), 1)
+                    .pattern("## ")
+                    .pattern("##/")
+                    .pattern("  /")
+                    .input('#', ModItems.AXE_TIPS.get(name))
+                    .input('/', Items.STICK)
+                    .criterion(hasItem(ModItems.AXE_TIPS.get(name)), conditionsFromItem(ModItems.AXE_TIPS.get(name)))
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .offerTo(recipeExporter);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BEARDED_AXES.get(name), 1)
+                    .pattern("## ")
+                    .pattern("# /")
+                    .pattern("  /")
+                    .input('#', ModItems.AXE_TIPS.get(name))
+                    .input('/', ModItems.SMALL_STICK)
+                    .criterion(hasItem(ModItems.AXE_TIPS.get(name)), conditionsFromItem(ModItems.AXE_TIPS.get(name)))
+                    .criterion(hasItem(ModItems.SMALL_STICK), conditionsFromItem(ModItems.SMALL_STICK))
+                    .offerTo(recipeExporter);
+
             ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SAI.get(name), 1)
                     .pattern("##")
                     .pattern("/#")
@@ -320,6 +412,42 @@ public class ModRecipeProvider extends FabricRecipeProvider
                     .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .offerTo(recipeExporter);
         }
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ARQUEBUS, 1)
+                .pattern("BL ")
+                .pattern(" S ")
+                .input('B', ModItems.ARQUEBUS_BARREL)
+                .input('L', ModItems.MATCHLOCK_MECHANISM)
+                .input('S', ModItems.GUN_STOCK)
+                .criterion(hasItem(ModItems.ARQUEBUS_BARREL), conditionsFromItem(ModItems.ARQUEBUS_BARREL))
+                .criterion(hasItem(ModItems.MATCHLOCK_MECHANISM), conditionsFromItem(ModItems.MATCHLOCK_MECHANISM))
+                .criterion(hasItem(ModItems.GUN_STOCK), conditionsFromItem(ModItems.GUN_STOCK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BLUNDERBUSS, 1)
+                .pattern("B ")
+                .pattern("L ")
+                .pattern("S ")
+                .input('B', ModItems.BLUNDERBUSS_BARREL)
+                .input('L', ModItems.MATCHLOCK_MECHANISM)
+                .input('S', ModItems.GUN_STOCK)
+                .criterion(hasItem(ModItems.BLUNDERBUSS_BARREL), conditionsFromItem(ModItems.BLUNDERBUSS_BARREL))
+                .criterion(hasItem(ModItems.MATCHLOCK_MECHANISM), conditionsFromItem(ModItems.MATCHLOCK_MECHANISM))
+                .criterion(hasItem(ModItems.GUN_STOCK), conditionsFromItem(ModItems.GUN_STOCK))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.MATCHLOCK_PISTOL, 1)
+                .pattern("B ")
+                .pattern("L ")
+                .pattern("S ")
+                .input('B', ModItems.PISTOL_BARREL)
+                .input('L', ModItems.MATCHLOCK_MECHANISM)
+                .input('S', ModItems.GUN_STOCK)
+                .criterion(hasItem(ModItems.PISTOL_BARREL), conditionsFromItem(ModItems.PISTOL_BARREL))
+                .criterion(hasItem(ModItems.MATCHLOCK_MECHANISM), conditionsFromItem(ModItems.MATCHLOCK_MECHANISM))
+                .criterion(hasItem(ModItems.GUN_STOCK), conditionsFromItem(ModItems.GUN_STOCK))
+                .offerTo(recipeExporter);
+
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.CLAYMORES.get("wood"), 1)
                 .pattern(" # ")
