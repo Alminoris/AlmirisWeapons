@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "##/",
+    "  /"
+  ],
+  "key": {
+    "#": {
+      "item": "almirisweapons:diamond_axe_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "almirisweapons:diamond_dane_axe"
+  }
+}

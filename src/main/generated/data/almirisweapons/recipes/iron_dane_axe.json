@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "##/",
+    "  /"
+  ],
+  "key": {
+    "#": {
+      "item": "almirisweapons:iron_axe_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "almirisweapons:iron_dane_axe"
+  }
+}

@@ -1,10 +1,12 @@
 package net.alminoris.almirisweapons.mixin;
 
 import net.alminoris.almirisweapons.AlmirisWeapons;
+import net.alminoris.almirisweapons.item.ModItems;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.json.ModelTransformation;
+import net.minecraft.client.render.model.json.ModelTransformation.Mode;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
@@ -112,6 +114,67 @@ public abstract class ItemRendererMixin
             {
                 return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, name+"_odachi_3d"), "inventory"));
             }
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useDaneAxeModel(BakedModel value, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        for(String name : MATERIALS)
+        {
+            if (stack.isOf(DANE_AXES.get(name)) && renderMode != ModelTransformation.Mode.GUI)
+            {
+                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, name+"_dane_axe_3d"), "inventory"));
+            }
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useKatarModel(BakedModel value, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        for(String name : MATERIALS)
+        {
+            if (stack.isOf(KATARS.get(name)) && renderMode != ModelTransformation.Mode.GUI)
+            {
+                return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, name+"_katar_3d"), "inventory"));
+            }
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useArquebusModel(BakedModel value, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        if (stack.isOf(ARQUEBUS) && renderMode != ModelTransformation.Mode.GUI)
+        {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, "arquebus_3d"), "inventory"));
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useBlunderbussModel(BakedModel value, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        if (stack.isOf(BLUNDERBUSS) && renderMode != ModelTransformation.Mode.GUI)
+        {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, "blunderbuss_3d"), "inventory"));
+        }
+
+        return value;
+    }
+
+    @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
+    public BakedModel useMatchlockPistolModel(BakedModel value, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay)
+    {
+        if (stack.isOf(MATCHLOCK_PISTOL) && renderMode != ModelTransformation.Mode.GUI)
+        {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(new Identifier(AlmirisWeapons.MOD_ID, "matchlock_pistol_3d"), "inventory"));
         }
 
         return value;

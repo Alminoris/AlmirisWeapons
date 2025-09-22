@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B ",
+    "L ",
+    "S "
+  ],
+  "key": {
+    "B": {
+      "item": "almirisweapons:pistol_barrel"
+    },
+    "L": {
+      "item": "almirisweapons:matchlock_mechanism"
+    },
+    "S": {
+      "item": "almirisweapons:gun_stock"
+    }
+  },
+  "result": {
+    "item": "almirisweapons:matchlock_pistol"
+  }
+}

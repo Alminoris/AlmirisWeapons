@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BL ",
+    " S "
+  ],
+  "key": {
+    "B": {
+      "item": "almirisweapons:arquebus_barrel"
+    },
+    "L": {
+      "item": "almirisweapons:matchlock_mechanism"
+    },
+    "S": {
+      "item": "almirisweapons:gun_stock"
+    }
+  },
+  "result": {
+    "item": "almirisweapons:arquebus"
+  }
+}
