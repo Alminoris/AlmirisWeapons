@@ -221,7 +221,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .criterion(hasItem(ModItems.SMALL_STICK), conditionsFromItem(ModItems.SMALL_STICK))
                 .offerTo(recipeExporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BULLET, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BULLET, 2)
                 .pattern(" * ")
                 .pattern("*#*")
                 .pattern(" * ")

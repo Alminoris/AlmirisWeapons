@@ -7,6 +7,7 @@ import net.alminoris.almirisweapons.sound.ModSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
@@ -15,6 +16,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -87,17 +89,11 @@ public class BulletEntity extends PersistentProjectileEntity
     }
 
     @Override
-    public void onRemoved()
+    protected void onBlockHit(BlockHitResult blockHitResult)
     {
-        super.onRemoved();
-        if (!this.getWorld().isClient)
-        {
-            int count = this.random.nextBetween(0, 2);
-            if (count > 0)
-            {
-                this.dropStack(new ItemStack(Items.IRON_NUGGET, count));
-            }
-        }
+        super.onBlockHit(blockHitResult);
+        int count = this.random.nextBetween(0, 2);
+        dropStack(new ItemStack(Items.IRON_NUGGET, count));
     }
 
     @Override
