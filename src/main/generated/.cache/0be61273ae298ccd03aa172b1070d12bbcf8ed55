@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-19T21:03:23.2369107	Almiris Weapons/Recipes
+// 1.21.1	2025-09-22T08:05:13.6431158	Almiris Weapons/Recipes
 90e6e2add38fe7cebeee936e812e07afb8f0dd6e data\almirisweapons\recipe\iron_bearded_axe.json
 ccf96eda0288d404db2dca6e48bb3a0acf2ddf7c data\almirisweapons\recipe\gold_mace_tip.json
 6e767a2986f8af9aa39454283e1f8b8d269c09bc data\almirisweapons\recipe\gold_katana.json
@@ -11,7 +11,7 @@ ee3a627f3b0774b27f29ca58f129cb0ab76ab176 data\almirisweapons\recipe\wood_sai.jso
 a3e540b70735ae576003a0d6f3f4775bb8426253 data\almirisweapons\recipe\stone_rapier.json
 09e72c4b8875a17458d7bac7a5a1632d7c007d43 data\almirisweapons\advancement\recipes\combat\gold_halberd.json
 3430a37ccfb056623c41ece753b2da156eafc901 data\almirisweapons\advancement\recipes\misc\iron_axe_tip.json
-ca6983f4b666526ce064e58fc89a21de7c8054c5 data\almirisweapons\recipe\bullet.json
+3c7ea4cbb1a38bb036086f30da8c2d15f8e9c355 data\almirisweapons\recipe\bullet.json
 97edbaf4a124fe875fb6bb2d575a1148f65ec07c data\almirisweapons\recipe\netherite_glaive.json
 8721d5d9348d6dec357b72a3b0f34b1cbe38be76 data\almirisweapons\advancement\recipes\combat\netherite_dagger.json
 46c5239ecb4c797654b24206c3fda3bc9f4593e7 data\almirisweapons\recipe\wood_claymore.json
