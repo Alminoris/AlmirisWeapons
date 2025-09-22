@@ -29,14 +29,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider
                     .add(ModItems.SCYTHES.get(name))
                     .add(ModItems.ODACHIS.get(name))
                     .add(ModItems.KATANAS.get(name))
+                    .add(ModItems.KATARS.get(name))
                     .add(ModItems.DAGGERS.get(name))
                     .add(ModItems.GLAIVES.get(name))
                     .add(ModItems.BATTLE_STAVES.get(name))
-                    .add(ModItems.RAPIERS.get(name))
-                    .add(ModItems.MACES.get(name));
+                    .add(ModItems.RAPIERS.get(name));
 
             getOrCreateTagBuilder(ItemTags.AXES)
-                    .add(ModItems.BATTLE_AXES.get(name));
+                    .add(ModItems.BATTLE_AXES.get(name))
+                    .add(ModItems.DANE_AXES.get(name))
+                    .add(ModItems.BEARDED_AXES.get(name));
         }
     }
 }
